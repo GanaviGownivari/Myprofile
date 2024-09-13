@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+<style>
+
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.contact-container {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contact-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 40px;
+}
+
+.contact-left img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contact-right {
+    flex: 1;
+    padding: 40px;
+}
+
+.contact-right h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.input-group textarea {
+    height: 150px;
+    resize: none;
+}
+
+button {
+    padding: 15px 30px;
+    background-color: #7b5ddc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6741b6;
+}
+
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="elephant">
+                <h1><img src="./assets/images/elephant-svgrepo-com.svg" alt="Elephant Icon"> Portfolio</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav-menu">
+                <a href="index.html">ABOUT ME</a>
+                <a href="services.html">SERVICES</a>
+                <a href="projects.html">PROJECTS</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-left">
+                <img src="./assets/images/contact-concept-landing-page.png" alt="Email Icon">
+            </div>
+            <div class="contact-right">
+                <h2>Get in touch</h2>
+                <form action="https://formspree.io/f/xeojwzqp" method="POST">
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea name="message" placeholder="Message..." required></textarea>
+                    </div>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        
+        <div class="footer-info">
+            <p>Keep It Simple..!!</p>
+            <p>Email: ganavivijaykumar61@gmail.com</p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
