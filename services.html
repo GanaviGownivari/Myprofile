@@ -3,153 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Portifolio</title>
+    <title>Services - Portfolio</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
     <style>
-        
-a {
-  text-decoration: none;
-  margin: 1rem 0;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.8125rem;
-  letter-spacing: 1px;
-}
+        /* General styling */
+        a {
+            text-decoration: none;
+            margin: 1rem 0;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8125rem;
+            letter-spacing: 1px;
+        }
 
-p {
-  font-size: 0.9rem;
-  margin: 1rem 0;
-  line-height: 1.5;
-  text-align: justify;
-}
+        p {
+            font-size: 0.9rem;
+            margin: 1rem 0;
+            line-height: 1.5;
+            text-align: justify;
+        }
 
-section {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 30px;
-}
+        section {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 30px;
+        }
 
-h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  color: #333;
-  font-size: 1.825rem;
-  margin: 1.3rem 0;
-}
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #333;
+            font-size: 1.825rem;
+            margin: 1.3rem 0;
+        }
 
-.section-lead {
-  max-width: 600px;
-  margin: 1rem auto 1.5rem;
-  align-content:center;
-}
+        /* Sticky Navbar */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
 
-.service a {
-  color: #5b7abb;
-  display: block;
-}
+        /* Services Section Styling */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
 
-.service h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  color: #56ceba;
-  font-size: 1.3rem;
-  margin: 1rem 0 0.6rem;
-}
+        .service {
+            background: #fff;
+            padding: 20px;
+            border-radius: 4px;
+            text-align: center;
+            border: 2px solid #e7e7e7;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 450px; /* Ensures all cards have the same height */
+            box-sizing: border-box;
+        }
 
-.services-grid {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-}
+        .service:hover {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+        }
 
-.service {
-  background: #fff;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 4px;
-  text-align: center;
-  -webkit-box-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: flex;
-  flex-wrap: wrap;
-  border: 2px solid #e7e7e7;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
+        .service i {
+            font-size: 3.45rem;
+            margin: 1rem 0;
+        }
 
-.service:hover {
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
-  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
-}
+        /* Card-specific colors */
+        .service1 i, .service1 h4 { color: #42b7ca; }
+        .service2 i, .service2 h4 { color: #425fca; }
+        .service3 i, .service3 h4 { color: #9c42ca; }
 
-.service i {
-  font-size: 3.45rem;
-  margin: 1rem 0;
-}
-
-.service1 i,
-.service1 h4,
-.service1 .cta {
-  color: #42b7ca;
-}
-
-.service1:hover {
-  border: 2px solid #42b7ca;
-}
-
-.service2 i,
-.service2 h4,
-.service2 .cta {
-  color: #425fca;
-}
-
-.service2:hover {
-  border: 2px solid #425fca;
-}
-
-.service3 i,
-.service3 h4,
-.service3 .cta {
-  color: #9c42ca;
-}
-
-.service3:hover {
-  border: 2px solid #9c42ca;
-}
-
-.service .cta span {
-  font-size: 0.6rem;
-}
-
-.service > * {
-  flex: 1 1 100%;
-}
-
-.service .cta {
-  align-self: flex-end;
-}
-
-@media all and (max-width:900px) {
-  .services-grid {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-  }
-}
+        /* Responsive layout for smaller screens */
+        @media all and (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .service {
+                height: auto;
+            }
+        }
     </style>
 </head>
 <body>
   <header>
     <div class="header-content">
         <div class="elephant">
-            <h1><img src="./assets/images/elephant-svgrepo-com.svg" alt="Elephant Icon"> Portfolio</h1>
+            <h1><img src="./assets/images/elephant-svgrepo-com.svg" alt="Elephant Icon"> GANAVI</h1>
         </div>
         <button class="menu-toggle" aria-label="Toggle navigation">
             <span class="bar"></span>
@@ -167,40 +116,43 @@ h3 {
 
     <section>
         <h3>My Services</h3>
-        <p class="section-lead"> I offer a range of data-driven services designed to help businesses unlock the full potential of their data. 
-            From in-depth data analysis and visualization to creating dynamic Power BI dashboards and optimizing SQL databases, 
-            I empower organizations to make smarter, data-informed decisions.</p>
+        <p> I offer a range of bioinformatics services designed to help organizations leverage scientific insights for impactful decisions. 
+          From homology modeling to predict protein structures, molecular docking for drug discovery, to mutation analysis for identifying 
+          genetic variants, my services support research and development in therapeutic discovery, structural biology, and personalized medicine.</p>
         <div class="services-grid">
             <div class="service service1">
                 <i class="ti-bar-chart"></i>
-                <h4> DATA ANALYST</h4>
-                <p>I provide comprehensive data analysis services, turning complex data into actionable insights. Leveraging my expertise in SQL and advanced analytical techniques, I help organizations make informed, data-driven decisions.</p>
-                
+                <h4>HOMOLOGY MODELING</h4>
+                <p>I specialize in homology modeling, a technique to predict a protein’s 3D structure by aligning its sequence to a known template from related proteins. This method supports bioinformatics services such as structural modeling, functional annotation, and therapeutic target discovery, offering insights into protein interactions and drug-binding potential.</p>
             </div>
-
             <div class="service service2">
                 <i class="ti-light-bulb"></i>
-                <h4>POWER BI</h4>
-                <p>I specialize in creating interactive Power BI dashboards that bring data to life. My dashboards are designed to be user-friendly, enabling stakeholders to explore and visualize key metrics effortlessly, driving strategic decisions.</p>
-                
+                <h4>MOLECULAR DOCKING</h4>
+                <p>I specialize in molecular docking, specifically using AutoDock to predict the binding interactions between ligands and target proteins. This technique aids in virtual screening, drug discovery, and interaction analysis, enabling bioinformatics services such as structure-based drug design, affinity prediction, and optimization of therapeutic candidates for enhanced efficacy.</p>
             </div>
-
             <div class="service service3">
                 <i class="ti-money"></i>
-                <h4>SQL</h4>
-                <p>With a strong foundation in SQL,I offer database management and optimization services. From designing efficient database schemas to querying and managing large datasets, I ensure that your data is organized, accessible, and ready for analysis.</p>
-                
+                <h4>MUTATION ANALYSIS</h4>
+                <p>I specialize in mutation analysis, utilizing bioinformatics tools to identify and predict the impact of genetic variations on protein structure and function. This expertise supports services like genetic variant annotation, disease association studies, and therapeutic target validation, essential for personalized medicine and drug discovery applications.</p>
             </div>
+            <div class="service service2">
+              <i class="ti-light-bulb"></i>
+              <h4>INSILICO PCR & EPITOPE PREDICTION</h4>
+              <p>I specialize in insilico PCR and epitope prediction. In silico PCR simulates PCR amplification to validate primer design and detect target sequences. Epitope prediction identifies antigenic regions in proteins, aiding vaccine design and immunological research. These services support applications in diagnostics, therapeutic development, and personalized immunotherapies.</p>
+          </div>
+          <div class="service service1">
+            <i class="ti-bar-chart"></i>
+            <h4>BASICS OF PYTHON</h4>
+            <p>I offer basic Python for biology, focusing on fundamental programming concepts applied to biological data analysis. This includes data handling, sequence analysis, visualization, and bioinformatics libraries like Biopython. These skills empower researchers to automate workflows, analyze genomic data, and create insights in fields such as genetics, molecular biology, and bioinformatics.</p>
+        </div>
         </div>
     </section>
 
     <footer>
-        <div class="footer-info">
+      <div class="footer-info">
           <p>Keep It Simple..!!</p>
-          <p>Email: ganavivijaykumar61@gmail.com</p>
-        </div>
-    </footer>
-
-    <script src="./assets/js/script.js"></script>
+          <p>Email: ganavigownivari@gmail.com</p>
+      </div>
+  </footer>
 </body>
 </html>
